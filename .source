@@ -1,0 +1,25 @@
+re-source ()
+{
+    file=~/.source
+    if [ -e $file ];then
+        source $file;
+    fi
+    unset file;
+}
+
+auto-source ()
+{
+    sourced=~/.source.d/;
+    if [ ! -e $sourced ];then
+        sourced=~/.dotfiles/.source.d/;
+    fi
+    files=(`\find $sourced -name "*.sh"`);
+    for file in ${files[@]}; do
+        \echo "source ${file};";
+        source ${file} > /dev/null 2>&1;
+    done
+    unset file;
+    unset files;
+    unset sourced;
+}
+auto-source > /dev/null 2>&1;
