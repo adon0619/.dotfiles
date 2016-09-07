@@ -45,12 +45,3 @@ if [ -e $source_file ]; then
     source $source_file;
 fi
 unset source_file;
-
-#-----------------------------------------
-# zprofile
-#-----------------------------------------
-zprofile_file=~/.zprofile;
-if [ -e $zprofile_file ]; then
-    source $zprofile_file;
-fi
-unset zprofile_file
