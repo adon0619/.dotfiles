@@ -86,7 +86,7 @@
 (setq company-minimum-prefix-length 2)
 (setq company-selection-wrap-around t)
 (setq company-dabbrev-downcase nil)
-(setq company-backends '(company-files company-dabbrev))
+(setq company-backends '(company-files company-dabbrev company-jedi company-inf-ruby))
 
 (define-key company-active-map (kbd "C-h") nil)
 (define-key company-active-map (kbd "M-n") nil)
@@ -279,3 +279,9 @@
 ;;---------------------------------------------------------
 (require 'clojure-mode)
 (require 'cider-mode)
+
+;; ruby magic comment
+(setq ruby-insert-encoding-magic-comment nil)
+
+;; 行末の空白を表示
+(setq-default show-trailing-whitespace t)
