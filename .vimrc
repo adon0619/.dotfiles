@@ -26,5 +26,17 @@ set autoindent
 set expandtab
 set shiftwidth=4
 
+" カレントディレクトリ自動切り替え
+set autochdir
+
+" NERDTreeの設定
+"" 隠しファイル表示
+let NERDTreeShowHidden = 1
+
+"" デフォルトでツリーを表示させる
+autocmd vimenter * NERDTree
+
+
+
 
 
